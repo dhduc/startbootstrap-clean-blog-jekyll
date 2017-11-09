@@ -13,7 +13,13 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>{{ site.title }}</h1>
+            <h1>
+              {{ site.brand }}
+              <span class="txt-rotate"
+                    data-period="2000"
+                    data-rotate='[ "| Jekyll", "| Bootstrap", "| Font Awesome", "| Jquery" ]'>
+              </span>
+            </h1>
             {% if site.description %}
               <span class="subheading">{{ site.description }}</span>
             {% endif %}
@@ -25,7 +31,7 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-10 col-md-10 mx-auto">
 
         {{ content }}
 
@@ -41,7 +47,7 @@ layout: default
                 <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
               {% endif %}
             </a>
-            <p class="post-meta">Posted by
+            <p class="post-meta"><i class="fa fa-fw fa-calendar"></i>Published by
               {% if post.author %}
                 {{ post.author }}
               {% else %}

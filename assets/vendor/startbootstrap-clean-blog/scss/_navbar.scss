@@ -3,9 +3,10 @@
   position: absolute;
   border-bottom: 1px solid $gray-200;
   background-color: white;
+  opacity: 0.9;
   @include sans-serif-font;
   .navbar-brand {
-    font-weight: 800;
+    font-weight: 500;
     color: $gray-800;
   }
   .navbar-toggler {
@@ -19,7 +20,7 @@
     > li.nav-item {
       > a {
         font-size: 12px;
-        font-weight: 800;
+        font-weight: 500;
         letter-spacing: 1px;
         text-transform: uppercase;
       }
@@ -27,23 +28,23 @@
   }
   @media only screen and (min-width: 992px) {
     border-bottom: 1px solid transparent;
-    background: transparent;
+    background: white;
     .navbar-brand {
       padding: 10px 20px;
-      color: $white;
+      color: $gray-800;
       &:focus,
       &:hover {
-        color: fade-out($white, .2);
+        color: fade-out($gray-800, .2);
       }
     }
     .navbar-nav {
       > li.nav-item {
         > a {
           padding: 10px 20px;
-          color: $white;
+          color: $gray-800;
           &:focus,
           &:hover {
-            color: fade-out($white, .2);
+            color: fade-out($gray-800, .2);
           }
         }
       }
@@ -97,4 +98,33 @@
       transform: translate3d(0, 100%, 0);
     }
   }
+}
+
+.contact-button {
+    height: 40px;
+    padding: 0 30px !important;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+    line-height: 39px;
+    border: 1px solid transparent;
+    background: #0af;
+    outline: 0;
+    color: #fff !important;
+    -webkit-box-shadow: 0 6px 20px rgba(0, 34, 51, .15);
+    -moz-box-shadow: 0 6px 20px rgba(0, 34, 51, .15);
+    box-shadow: 0 6px 20px rgba(0, 34, 51, .15);
+    display: block;
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: -.11px;
+    -webkit-transition: .2s box-shadow ease;
+    -moz-transition: .2s box-shadow ease;
+    transition: .2s box-shadow ease;
+    @media only screen and (max-width: 768px) {
+        color: $gray-800 !important;
+        padding: 0 !important;
+        background: transparent;
+        box-shadow: none;
+    }
 }
